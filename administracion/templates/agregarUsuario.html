@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width==device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/aggusuario.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+          <a href="#">VIJENI ADMIN</a>
+        </div>
+    
+        <div class="header-icons">
+          <div class="account">
+            <h4>Jhon Viek</h4>
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <nav>
+          <div class="side_navbar">
+            <span>----||||||||||||||||||----</span>
+            <a href='#'></a>
+            <a href="{% url 'agregarUsuario' %}" class="active">Agregar</a>
+            <a href="{% url 'administrador' %}">Modificar | Eliminar</a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="{% url 'logout' %}">Cerrar Sesión</a>
+          </div>
+        </nav>
+    
+        <div class="main-body">
+          <div class="promo_card">
+            <h1>Sistema de inserccion de datos</h1>
+            <span>Rellena el formulario con los datos a agregar</span>
+          </div>
+        <form action="agregarUsuario" method="POST">
+            <div class="containerrr">
+                <div class="card">
+                    {% csrf_token %}
+                    <a class="singup">Nuevo Usuario</a>
+                    <div class="inputBox">
+                        <input type="text" id="username" name="usuario" minlength="4" required="required">
+                        <span>Usuario</span>
+                    </div>
+        
+                    <div class="inputBox">
+                        <input type="text" id="password" name="contra" minlength="6" required="required">
+                        <span>Contrasena</span>
+                    </div>
+                    <div id="idMensaje">
+                        {% if mensaje %}
+                            <p id="men">{{mensaje}}</p>
+                        {% endif %}
+                    </div>
+                    <a href="{% url 'administrador' %}">Volver al menu</a>
+                    <button class="enter" type="submit" name="opcion" value="Agregar">Agregar</button>
+                </div>
+            </div>
+        </form>
+      </div>
+</html>

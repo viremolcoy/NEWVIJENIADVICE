@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login ADMIN</title>
+    <link rel="stylesheet" href="{% static 'css/loginadmin.css' %}">
+</head>
+<body>
+    <div class="login-box">
+        <p>Login ADMIN</p>
+        <form method="post">
+          {% csrf_token %}
+          <div class="user-box">
+            <input name="username" type="text">
+            <label>Usuario</label>
+          </div>
+          <div class="user-box">
+            <input name="password" type="password">
+            <label>Contraseña</label>
+          </div>
+          <button type="submit">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Entrar
+          </button>
+        </form>
+      </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú</title>
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+    <link rel="shortcut icon" href="{% static 'imagenes/logopngnegro.png' %}">
+</head>
+<body>
+    <img src="" alt="">
+    <h1>-| Bienvenido |-</h1>
+    <div>
+        <div>
+            <a href="{% url 'inicio' %}" class="maga">
+                <img src="{% static 'imagenes/web.png' %}" alt="" id="imge">
+            </a>
+            <a href="{% url 'administrador' %}" class="maga">
+                <img src="{% static 'imagenes/adminn.png' %}" alt="" id="imge">
+            </a>
+        </div>
+    </div>
+</body>
+</html>

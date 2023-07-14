@@ -1,0 +1,83 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMINISTRADOR</title>
+    <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+</head>
+<body>
+    {% block content %}
+    <header class="header">
+        <div class="logo">
+          <a href="#">VIJENI ADMIN</a>
+        </div>
+    
+        <div class="header-icons">
+          <div class="account">
+            {% if user.is_authenticated %}
+            <h4>{{ user.username }} </h4>
+            {% else %}
+            <h4></h4>
+            {% endif %}
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <nav>
+          <div class="side_navbar">
+            <span>----||||||||||||||||||----</span>
+            <a href='#'></a>
+            <a href="{% url 'agregarUsuario' %}">Agregar</a>
+            <a href="#" class="active">Modificar | Eliminar</a>
+            <a href="#"></a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href="{% url 'logout' %}">Cerrar Sesión</a>
+          </div>
+        </nav>
+    
+        <div class="main-body">
+          <div class="promo_card">
+            <h1>Sistema de modificacion de datos</h1>
+            <span>Presione el boton con la accion a realizar sobre el usuario</span>
+          </div>
+          <table> 
+            <thead>
+                <tr class="titulos">
+                    <th>ID</th>
+                    <th>Usuario</th>
+                    <th>Contraseña</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    </tr>
+            </thead>
+            <tbody>
+                {% for u in usuarios %}
+                <tr>
+                    <td>{{u.id_usuario}}</td>
+                    <td>{{u.usuario}}</td>
+                    <td>{{u.contraseña}}</td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="{% url 'encontrarUsuario' pk=u.id_usuario %}">Modificar</a></td>
+                    <td><a href="{% url 'eliminarUsuario'  pk=u.id_usuario %}">Eliminar</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+      </div>
+    {% endblock %}
+</body>
+</html>

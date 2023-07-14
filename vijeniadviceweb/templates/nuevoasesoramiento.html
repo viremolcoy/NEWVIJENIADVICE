@@ -1,0 +1,178 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/nuevoasesoramiento.css' %}">
+    <link rel="shortcut icon" href="{% static 'imagenes/logo.png' %}">
+    <title>Nuevo Asesoramiento</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="/index.html"><img src="{% static 'imagenes/logooo.png' %}" alt="Logo de la marca" id="logop"></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="{% url 'inicio' %}">Inicio</a></li>
+            </ul>
+        </nav>
+        <a class="btn" href="{% url 'registro' %}"><button>Cuenta</button></a>
+
+        <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+
+        <div id="mobile-menu" class="overlay">
+
+            <a onclick="closeNav()" href="" class="close">&times;</a>
+
+            <div class="overlay-content">
+                <li><a href="{% url 'inicio' %}">Inicio</a></li>
+                <a href="{% url 'registro' %}">Cuenta</a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <section class="formulario">
+        <div class="container">
+            
+            <h1>Nuevo Asesoramiento</h1>
+            <div class="progress-bar">
+                <div class="step">
+                    <p>Paso 1</p>
+                    <div class="bullet">
+                        <span class="numero">1</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                    <p>Paso 2</p>
+                    <div class="bullet">
+                        <span class="numero">2</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                    <p>Paso 3</p>
+                    <div class="bullet">
+                        <span class="numero">3</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                    <p>Fin</p>
+                    <div class="bullet">
+                        <span class="numero">4</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+            </div>
+            <div class="form-outer">
+                <form action="#" id="formula">
+                    <div class="page slide-page">
+                        <div class="field">
+                            <div class="label" >Nombre</div>
+                            <input type="text" id="nom" required>
+                        </div>
+                        <div class="field">
+                            <div class="label">Apellido</div>
+                            <input type="text" id="apellido" required>
+                        </div>
+                        <p class="warnings" id="warnings"></p>
+                        <div class="field">
+                            <button class="firstNext next" onclick="avanzar()">Siguiente</button>
+                        </div>
+                        <p class="warnings" id="warnings"></p>
+                    </div>
+
+                    <div class="page">
+                        <div class="field">
+                            <div class="label">Correo Electronico</div>
+                            <input type="email" id="mail">
+                        </div>
+                        <div class="field">
+                            <div class="label">Número de Telefono</div>
+                            <input type="text" id="fono">
+                        </div>
+                        <div class="field btns">
+                            <button class="prev-1 prev">Atrás</button>
+                            <button class="next-1 next" onclick="siguiente()">Siguiente</button>
+                        </div>
+                    </div>
+
+                    <div class="page">
+                        <div class="field">
+                            <div class="label">Fecha de Nacimiento</div>
+                            <input type="date" id="fecha">
+                        </div>
+                        <div class="field">
+                            <div class="label">Genero</div>
+                            <select>
+                                <option>--</option>
+                                <option>Masculino</option>
+                                <option>Femenino</option>
+                            </select>
+                        </div>
+                        <div class="field btns">
+                            <button class="prev-2 prev">Atrás</button>
+                            <button class="next-2 next" onclick="siguiente2()">Siguiente</button>
+                        </div>
+                    </div>
+
+                    <div class="page">
+                        <div class="textoh3">
+                            <h3>x<span id="quantity">1<span id="product-description"> PLAN VIJENI</span></h3> 
+                            <h3>TOTAL: $<span id="unit-price">30000</h3>
+                        </div>
+                        <div class="field btns">
+                            <button class="prev-3 prev">Atrás</button>
+                            <button class="submit" id="checkout-btn">Pagar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="{% static 'imagenes/logooo.png' %}" alt="logo">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Somos una empresa fundada el 2023 con el proposito de 
+                    ayudar a las personas a cumplir sus objetivos fitness.
+                </p>
+                
+            </div>
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <div class="red-social">
+                    <a href="#" class="fa fa-instagram"><img src="{% static 'imagenes/ig1.png' %}" alt="logo instagram"
+                            class="redes"></a>
+                    <a href="#" class="fa fa-facebook"><img src="{% static 'imagenes/face.png' %}" alt="logo facebook"
+                            class="redes"></a>
+                    <a href="#" class="fa fa-twitter"><img src="{% static 'imagenes/twtlogo (1).png' %}" alt="logo twitter"
+                            class="redes"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2023 <b> VIJENI ADVICE </b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/formulario.js' %}"></script>
+
+</body>
+
+</html>

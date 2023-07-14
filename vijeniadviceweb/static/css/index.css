@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
+    gap: 32px;
+    text-align: center;
+    justify-content: center;
+}
+
+.header{
+    background-color: black;
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    min-height: 70vh;
+    padding: 70px 0 0 0;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 20px;
+    color: white;
+    display: block;
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover{
+    color: aqua;
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu-label{
+    cursor: pointer;
+    display: none;
+}
+
+.menu-icono{
+    height: 60px;
+    width: 60px;
+}
+
+.header-content{
+    display: flex;
+    padding-top: 20px;
+}
+
+.header-txt{
+    width: 50%;
+}
+
+.header-txt h1{
+    font-size: 70px;
+    line-height: 85px;
+    color: #FBFCFF;
+    margin-bottom: 20px;
+}
+
+.header-txt p{
+    font-size: 16px;
+    color: #FBFCFF;
+    margin-bottom: 30px;
+}
+
+.header-img{
+    width: 50%;
+    text-align: center;
+}
+
+.header-img img{
+    width: 400px;
+}
+
+
+   
+
+.buttons{
+    display: flex;
+    margin: 30px;
+}
+
+.btn-1{
+    display: inline-block;
+    padding: 13px 20px;
+    border: 1px solid #FBFCFF;
+    color: #FBFCFF;
+    border-radius: 15px;
+    margin-left: 150px;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.btn-1:hover{
+    background-color: aqua;
+    color: black;
+}
+
+.menu-pl{
+    padding: 0 0 0 0;
+}
+
+
+
+h2{
+    font-size: 50px;
+    color: black;
+    margin-bottom: 40px;
+}
+
+.titulo{
+    padding-top: 50px;
+    text-align: center;
+}
+.general-content{
+    display: flex;
+    grid-template-columns: repeat(3, 2fr);
+    grid-gap: 35px;
+}
+
+.general-txt{
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding-bottom: 35px;
+}
+
+.general-txt img{
+    border-radius: 25px 25px 0 0;
+    width: 100%;
+    height: 250px;
+}
+
+.general-txt h3{
+    font-size: 18px;
+    color: #292933;
+    padding: 25px 25px 10px 25px;
+}
+
+.general-txt p{
+    font-size: 16px;
+    color: #3a3a48;
+    padding: 0 25px 20px 25px;
+}
+
+.prices{
+    padding: 0 25px 10px 25px;
+    display: flex;
+}
+
+
+
+.btn-2{
+    display: inline-block;
+    padding: 7px 20px;
+    border: 1px solid black;
+    color: black;
+    border-radius: 15px;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+
+.btn-2:hover{
+    background-color: aqua;
+    color: black;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    max-width: 1100px;
+}
+.card{
+    width: 350px;
+    height: 500px;
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #FBFCFF;
+    box-shadow: 0px 1 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+figure > img{
+    width: 100%;
+    height: 100%;
+}
+
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+
+.card img{
+    width: 100%;
+    height: 230px;
+}
+
+.card .contenido p{
+    font-size: 16px;
+    color: #3a3a48;
+    padding: 0 25px 20px 25px;
+}
+
+.card .contenido h3{
+    font-size: 18px;
+    color: #292933;
+    padding: 12px 15px 10px 25px;
+}
+
+.card .contenido .buttons{
+    padding: 0 30%;
+}
+
+.info{
+    padding: 60px 60px 50px 0;
+    display: flex;
+}
+
+.info-img{
+    width: 50%;
+    padding-left: 35px;
+}
+
+.info-img img{
+    border-radius: 25px;
+    width: 450px;
+}
+
+.info-txt{
+    width: 50%;
+    padding-left: 55px;
+}
+
+.info-txt p{
+    font-size: 25px;
+    color: #3a3a48;
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+
+.info-txt h2{
+    margin-top: 20px;
+}
+
+.info-txt a{
+    margin-top: 35px;
+}
+
+
+/*:::::Pie de Pagina*/
+.pie-pagina{
+    width: 100%;
+    background-color: black;
+    margin-top: auto;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: black;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: aqua;
+}
+.pie-pagina .grupo-2{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+}
+.redes{
+    height: 45px;
+    width: 45px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #E6E6E6;
+    min-width: 400px;
+}

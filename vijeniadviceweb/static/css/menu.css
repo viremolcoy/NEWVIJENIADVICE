@@ -1,0 +1,33 @@
+
+h1{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: rgb(0, 0, 0);
+}
+
+#imge{
+  border-radius: 8px;
+  width: 400px;
+  height: auto;
+  box-shadow: 0 0 30px #000;
+  cursor: pointer;
+  transition: all 0.5s;
+  margin-left: 150px;
+  margin-bottom: 20px;
+}
+
+div{
+  display: inline;
+  grid-template-columns: repeat(auto-fit, minmax(400px,fr));
+}
+
+#imge:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+
+#imge:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}

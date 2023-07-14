@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/storenew.css' %}">
+    <link rel="shortcut icon" href="{% static 'imagenes/logo.png' %}">
+    <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+        <header class="header">
+        <div class="logo">
+            <a href="/index.html"><img src="{% static 'imagenes/logooo.png' %}" alt="Logo de la marca" id="logop"></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="{% url 'inicio' %}">Inicio</a></li>
+            </ul>
+        </nav>
+        <a class="btn" href="/html/iniciosesion.html"><button>Cuenta</button></a>
+
+        <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+
+        <div id="mobile-menu" class="overlay">
+
+            <a onclick="closeNav()" href="" class="close">&times;</a>
+
+            <div class="overlay-content">
+                <li><a href="{% url 'inicio' %}">Inicio</a></li>
+                <li><a href="{% url 'registro' %}">Cuenta</a></li>
+            </div>
+
+        </div>
+
+    </header>
+    <div class="todo">
+        <div class="header1">
+            <p class="logo">VIJENI STORE</p>
+            <div class="cart"><i class="fa-solid fa-cart-shopping"></i>
+                <p id="count">0</p>
+            </div>
+        </div>
+        <div class="container">
+            <div id="root"></div>
+            <div class="sidebar">
+                <div class="head">
+                    <p>CARRITO</p>
+                </div>
+                <div id="cartItem">Tu carrito esta vacío</div>
+                <div class="foot">
+                    <h3>Total</h3>
+                    <h2 id="total">$ 0.00</h2>
+                </div>
+                <a href="#"><button>Finalizar Pago</button></a>
+            </div>
+        </div>
+        <script src="{% static 'js/storenew.js' %}"></script>
+        <footer class="pie-pagina">
+            <div class="grupo-1">
+                <div class="box">
+                    <figure>
+                        <a href="#">
+                            <img src="{% static 'imagenes/logooo.png' %}" alt="logo">
+                        </a>
+                    </figure>
+                </div>
+                <div class="box">
+                    <h2>SOBRE NOSOTROS</h2>
+                    <p>Somos una empresa Fundada el 2023 con el proposito de </p>
+                    <p>Ayudar a la gente a cumplir sus objetivos fitness</p>
+                </div>
+                <div class="box">
+                    <h2>SIGUENOS</h2>
+                    <div class="red-social">
+                        <a href="#" class="fa fa-instagram"><img src="/imagenes/ig1.png" alt="logo instagram"
+                                class="redes"></a>
+                        <a href="#" class="fa fa-facebook"><img src="/imagenes/face.png" alt="logo facebook"
+                                class="redes"></a>
+                        <a href="#" class="fa fa-twitter"><img src="/imagenes/twtlogo (1).png" alt="logo twitter"
+                                class="redes"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="grupo-2">
+                <small>&copy; 2023 <b> VIJENI ADVICE </b> - Todos los Derechos Reservados.</small>
+            </div>
+        </footer>
+</body>
+
+</html>

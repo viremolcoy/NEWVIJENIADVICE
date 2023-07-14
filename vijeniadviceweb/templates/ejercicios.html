@@ -1,0 +1,326 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vijeni Advice</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/ejercicios.css' %}">
+    <link rel="shortcut icon" href="{% static 'imagenes/logo.png' %}">
+    <script src="{% static 'js/nav.js' %}" ></script>
+    <title>Espalda</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="/index.html"><img src="{% static 'imagenes/logooo.png' %}" alt="Logo de la marca" id="logop"></a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="{% url 'inicio' %}">Inicio</a></li>
+            </ul>
+        </nav>
+        <a class="btn" href="{% url 'registro' %}"><button>Cuenta</button></a>
+
+        <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+
+        <div id="mobile-menu" class="overlay">
+
+            <a onclick="closeNav()" href="" class="close">&times;</a>
+
+            <div class="overlay-content">
+                <li><a href="{% url 'inicio' %}">Inicio</a></li>
+                <a href="{% url 'registro' %}">Cuenta</a>
+            </div>
+
+        </div>
+
+    </header>
+
+    <h1 id="titulop">EJERCICIOS</h1>
+    <section class="cartas">
+        <div class="card">
+            <div class="face front">
+                <img src="{% static 'imagenes/espaldare.jpg' %}" alt="">
+                <h1>
+                    Remo mancuerna
+                </h1>
+            </div>
+            <div class="face back">
+                    <h3>Remo con mancuerna</h3>
+                    <p>El remo con mancuerna debes inclinarte, apoyandote en algo y llevar la mancuerna hacia la cintura.</p>
+                    <a href="#">+INFO</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src="{% static 'imagenes/espalda2.jpg' %}" alt="">
+                <h1>
+                    Pull-over
+                </h1>
+            </div>
+            <div class="face back">
+                <h3 id="pullo">Pull-over polea alta</h3>
+                <p>El pullover con polea alta es un ejercicio que nos va a permitir entrenar la espalda y parte de los
+                    brazos.</p>
+                <div class="link">
+                    <a href="#">+INFO</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src="{% static 'imagenes/espalda3.jpg' %}" alt="">
+                <h1>
+                    Remo con polea
+                </h1>
+            </div>
+            <div class="face back">
+                <h3>Remo con polea baja</h3>
+                <p>El remo en polea baja, con agarre estrecho, es un ejercicio ideal para el desarrollo de la espalda,
+                    pues solicita principalmente el dorsal ancho.</p>
+                <div class="link">
+                    <a href="#">+INFO</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src="{% static 'imagenes/espalda4.jpg' %}" alt="">
+                <h1>
+                    Remo
+                </h1>
+            </div>
+            <div class="face back">
+                <h3>Remo con barra</h3>
+                <p>El remo horizontal con barra, trabaja principalmente los músculos de la
+                    espalda. Entre ellos, se solicita sobre todo el dorsal ancho.</p>
+                <div class="link">
+                    <a href="#">+INFO</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src="{% static 'imagenes/espaldare2.jpg' %}" alt="">
+                <h1>
+                    Pull-down de pie
+                </h1>
+            </div>
+            <div class="face back">
+                <h3>Pull-down de pie con un brazo</h3>
+                <p>Con el Pull-down de pie de un solo brazo trabajaremos principalmente y en gran medida el dorsal.</p>
+                <div class="link">
+                    <a href="#">+INFO</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src="{% static 'imagenes/pecho1.jpg' %}" alt="">
+                <h1>
+                    Press Banca
+                </h1>
+            </div>
+            <div class="face back">
+                <h3>Press Banca</h3>
+                <p>Con press de banca principalmente trabjamos el pectoral mayor</p>
+                <div class="link">
+                    <a href="#">+INFO</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src="{% static 'imagenes/pecho2.jpg' %}" alt="">
+                <h1>
+                    Aperturas mancuernas
+                </h1>
+            </div>
+            <div class="face back">
+                <h3>Aperturas con mancuernas</h3>
+                <p>El musculo que se trabaja con la apertura con mancuernas es el esternocostal del pectoral mayor.</p>
+                <div class="link">
+                    <a href="#">+INFO</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src="{% static 'imagenes/pecho3.jpg' %}" alt="">
+                <h1>
+                    Press maquina
+                </h1>
+            </div>
+            <div class="face back">
+                <h1>Press en maquina</h1>
+                <p>Con el press de maquina trabajaremos principalmente el pectotral mayor, es un ejercicio similar al
+                    press de banca, pero la diferencia esta en la implicacion de los musculos.</p>
+                <div class="link">
+                    <a href="#">+INFO</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src="{% static 'imagenes/pecho4.jpg' %}" alt="">
+                <h1>
+                    Cruces en polea
+                </h1>
+            </div>
+            <div class="face back">
+                <h3>Cruces en polea</h3>
+                <p>Con cruces de polea alta daremos gran prioridad al trabajo de la zona alta del pecho.</p>
+                <div class="link">
+                    <a href="#">+INFO</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src="{% static 'imagenes/pecho5.jpg' %}" alt="">
+                <h1>
+                    Flexion una mano
+                </h1>
+            </div>
+            <div class="face back">
+                <h3>Flexiones a una mano con apoyo</h3>
+                <p>Un gran ejercicio que no solo nos ayudara a tonificar y trabajar el pecho, si no que tambien mejorar
+                    nuestar coordinacion</p>
+                <div class="link">
+                    <a href="#">+INFO</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="face front">
+                <img src="{% static 'imagenes/pierna1.jpg' %}" alt="">
+                <h1>
+                    Hip Thrust
+                </h1>
+            </div>
+            <div class="face back">
+                <h3>Hip Thrust</h3>
+                <p>Trabajeremos en mayor medida el glúteo mayor y los isquiotibiales.</p>
+                <div class="link">
+                    <a href="#">+INFO</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src="{% static 'imagenes/pierna2.jpg' %}" alt="">
+                <h1>
+                    Pistol Squat
+                </h1>
+            </div>
+            <div class="face back">
+                <h3>Pistol Squat</h3>
+                <p>Entrena casi todos los músculos de las piernas, como: cuádriceps, los glúteos, los gemelos y femoral.
+                </p>
+                <div class="link">
+                    <a href="#">+INFO</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src="{% static 'imagenes/pierna3.jpg' %}" alt="">
+                <h1>
+                    Dumbbell Split Jump
+                </h1>
+            </div>
+            <div class="face back">
+                <h1>Dumbbell Split Jump</h1>
+                <p>Este ejercicio desarrolla potencia explosiva y fuerza en las piernas.</p>
+                <div class="link">
+                    <a href="#">+INFO</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src="{% static 'imagenes/pierna4.jpg' %}" alt="">
+                <h1>
+                    Sentadilla
+                </h1>
+            </div>
+            <div class="face back">
+                <h3>Sentadilla</h3>
+                <p>Este ejercicio trabaja los músculos primarios como son: cuádriceps, glúteo mayor, isquiotibiales y
+                    aductores.</p>
+                <div class="link">
+                    <a href="#">+INFO</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face front">
+                <img src="{% static 'imagenes/pierna5.jpg' %}" alt="">
+                <h1>
+                    Peso Muerto
+                </h1>
+            </div>
+            <div class="face back">
+                <h3>Peso Muerto</h3>
+                <p>En concreto, los grupos musculares que se trabajan durante el peso muerto son: Glúteos</p>
+                <div class="link">
+                    <a href="#">+INFO</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="{% static 'imagenes/logooo.png' %}" alt="logo">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Somos una empresa Fundada el 2023 con el proposito de </p>
+                <p>Ayudar a la gente a cumplir sus objetivos fitness</p>
+            </div>
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <div class="red-social">
+                    <a href="#" class="fa fa-instagram"><img src="{% static 'imagenes/ig1.png' %}" alt="logo instagram"
+                        class="redes"></a>
+                <a href="#" class="fa fa-facebook"><img src="{% static 'imagenes/face.png' %}" alt="logo facebook"
+                        class="redes"></a>
+                <a href="#" class="fa fa-twitter"><img src="{% static 'imagenes/twtlogo (1).png' %}" alt="logo twitter"
+                        class="redes"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2023 <b> VIJENI ADVICE </b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
